@@ -1,5 +1,7 @@
 package com.ricknout.rugbyranker.core.api
 
+import com.google.gson.annotations.SerializedName
+
 data class Effective(
     val label: String,
     val millis: Long,
@@ -25,6 +27,28 @@ data class WorldRugbyRankingsResponse(
     val effective: Effective,
     val entries: List<Entry>,
     val label: String
+)
+
+data class WorldRugbyNewsResponse(
+        @SerializedName("content")
+        val news: List<News>
+)
+
+data class News(
+        @SerializedName("id")
+        val newsId: String,
+        @SerializedName("title")
+        val newsTitle: String,
+        @SerializedName("description")
+        val newsDescription: String?,
+        @SerializedName("date")
+        val newsDate: String,
+        @SerializedName("canonicalUrl")
+        val newsCanonicalUrl: String,
+        @SerializedName("subtitle")
+        val newsSubtitle: String?,
+        @SerializedName("imageUrl")
+        val newsImageUrl: String?
 )
 
 data class PageInfo(

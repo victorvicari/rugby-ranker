@@ -13,6 +13,7 @@ import com.ricknout.rugbyranker.matches.ui.MensCompleteMatchesViewModel
 import com.ricknout.rugbyranker.matches.ui.MensUnplayedMatchesViewModel
 import com.ricknout.rugbyranker.matches.ui.WomensCompleteMatchesViewModel
 import com.ricknout.rugbyranker.matches.ui.WomensUnplayedMatchesViewModel
+import com.ricknout.rugbyranker.news.ui.NewsViewModel
 import com.ricknout.rugbyranker.rankings.ui.MensRankingsViewModel
 import com.ricknout.rugbyranker.rankings.ui.WomensRankingsViewModel
 import com.ricknout.rugbyranker.ui.MensViewModel
@@ -36,6 +37,7 @@ class MainActivity : DaggerAndroidXAppCompatActivity(R.layout.activity_main) {
     private val womensUnplayedMatchesViewModel: WomensUnplayedMatchesViewModel by viewModels { viewModelFactory }
     private val mensCompleteMatchesViewModel: MensCompleteMatchesViewModel by viewModels { viewModelFactory }
     private val womensCompleteMatchesViewModel: WomensCompleteMatchesViewModel by viewModels { viewModelFactory }
+    private val newsViewModel: NewsViewModel by viewModels { viewModelFactory }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +55,9 @@ class MainActivity : DaggerAndroidXAppCompatActivity(R.layout.activity_main) {
                     mensLiveMatchesViewModel.scrollToTop()
                     mensUnplayedMatchesViewModel.scrollToTop()
                     mensCompleteMatchesViewModel.scrollToTop()
+                }
+                R.id.newsFragment -> {
+                    newsViewModel.scrollToTop()
                 }
                 R.id.womensFragment -> {
                     womensViewModel.scrollToTop()

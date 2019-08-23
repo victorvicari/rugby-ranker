@@ -117,6 +117,9 @@ ext {
             retrofit: [
                     retrofit: "com.squareup.retrofit2:retrofit:$versions.retrofit",
                     gsonConverter: "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+            ],
+            coil: [
+                    coil: "io.coil-kt:coil:0.6.1"
             ]
     ]
 }

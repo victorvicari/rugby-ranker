@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:id="@+id/newsFragment"
+        android:icon="@drawable/ic_news_feed_black_24dp"
+        android:title="@string/title_news" />
+
     <item
         android:id="@id/mensFragment"
         android:icon="@drawable/sl_gender_male_black_24dp"

@@ -28,6 +28,11 @@ interface WorldRugbyService {
         @Path("id") id: Long
     ): WorldRugbyTeamsResponse
 
+    @GET("content/worldrugby/text/{lang}")
+    suspend fun getNews(
+        @Path("lang") lang: String = "en"
+    ): WorldRugbyNewsResponse
+
     companion object {
         const val SPORT_MENS = "mru"
         const val SPORT_WOMENS = "wru"
